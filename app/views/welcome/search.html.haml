@@ -1,0 +1,12 @@
+<br>
+- @response.businesses.each do |business|
+  - if not business.is_closed
+    = business.name
+    <br>
+    = "rating: " + business.rating.to_s
+    <br>
+    = "location: " 
+    - business.location.display_address.each do |piece|
+      = piece
+    <br>
+    <br>

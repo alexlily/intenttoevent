@@ -1,0 +1,16 @@
+%h1 Intent to Event
+
+
+
+#myLocation
+
+:javascript
+  $(document).load(new MyApp.getLocation());
+
+- @all_users.each do |user|
+  = user.latitude
+  = user.longitude
+  <br>
+
+= link_to "find food", "welcome/search"
+
